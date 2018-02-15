@@ -24,8 +24,6 @@
         <img id="test2-thumb" crossorigin="anonymous" src="https://i.imgur.com/I0qF14A.png">
         <img id="test3" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
         <img id="test3-thumb" crossorigin="anonymous" src="https://i.imgur.com/EeN3aL8.png">
-        <img id="test4" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
-        <img id="test4-thumb" crossorigin="anonymous" src="https://i.imgur.com/I0qF14A.png">
         
         
         <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
@@ -47,6 +45,8 @@
       <!-- 360-degree image. -->
       <a-sky id="image-360" radius="10" src="#city"></a-sky>
 
+      <a-iframe id='ifr' frameborder="0" scrolling="no" width="550" height="400">
+
       <!-- Image links. -->
       <!-- In position il primo valore allinea verso sinistra, il secondo verso destra, il terzo la profondita -->
       <a-entity id="links" layout="type: line; margin: 1.5" position="-2 -1 -4">
@@ -54,8 +54,7 @@
         <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
         <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
         <a-entity template="src: #link" data-src="#test2" data-thumb="#test2-thumb"></a-entity>
-        <a-entity template="src: #link" data-src="#test3" data-thumb="#test3-thumb"></a-entity><br />
-        <a-entity template="src: #link" data-src="#test4" data-thumb="#test4-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#test3" data-thumb="#test3-thumb"></a-entity>
       </a-entity>
 
       <!-- Camera + cursor. -->
