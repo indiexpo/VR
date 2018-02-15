@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>indiexpo 360&deg; V4</title>
+    <title>indiexpo 360&deg; V5</title>
     <meta name="description" content="360&deg; Image Gallery - A-Frame">
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
@@ -45,11 +45,12 @@
       <!-- 360-degree image. -->
       <a-sky id="image-360" radius="10" src="#city"></a-sky>
 
-      <iframe id='ifr' frameborder="0" scrolling="no" width="550" height="400">
+      
 
       <!-- Image links. -->
       <!-- In position il primo valore allinea verso sinistra, il secondo verso destra, il terzo la profondita -->
       <a-entity id="links" layout="type: line; margin: 1.5" position="-2 -1 -4">
+        <iframe id='ifr' frameborder="0" scrolling="no" width="550" height="400">
         <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb" onClick='document.getElementById("ifr").src="https://www.indiexpo.net/embed/binary-boy";'></a-entity>
         <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
         <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
