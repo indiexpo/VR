@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>indiexpo 360&deg; V18</title>
+    <title>indiexpo 360&deg; V19</title>
     <meta name="description" content="360&deg; Image Gallery - A-Frame">
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
@@ -49,8 +49,8 @@
       <!-- Image links. -->
       <!-- In position il primo valore allinea verso sinistra, il secondo verso destra, il terzo la profondita -->
       <a-entity id="links" layout="type: line; margin: 1.5" position="-2 -1 -4">
-        <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb" ciao></a-entity>
-        <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb" link_1></a-entity>
+        <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb" link_2></a-entity>
         <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
         <a-entity template="src: #link" data-src="#test2" data-thumb="#test2-thumb"></a-entity>
         <a-entity template="src: #link" data-src="#test3" data-thumb="#test3-thumb"></a-entity>
@@ -68,9 +68,15 @@
       </a-entity>
     </a-scene>
     <script type="text/javascript">
-      AFRAME.registerComponent('ciao',{
+      AFRAME.registerComponent('link_1',{
         init:function(){
           this.el.addEventListener('mouseup' , event => { window.open("https://www.indiexpo.net/it/play/2357",'_self')
+                                                        });
+        }
+      });
+      AFRAME.registerComponent('link_2',{
+        init:function(){
+          this.el.addEventListener('mouseup' , event => { window.open("https://www.indiexpo.net/it/play/4154",'_self')
                                                         });
         }
       });
